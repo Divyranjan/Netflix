@@ -1,0 +1,233 @@
+body{
+    background-color: black;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.header {
+    width: 100%; /* The header takes up the full width of the viewport */
+    height: 100vh; /* The height is set to 100% of the viewport height */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url(Images/backimg1.jpg); /* A linear gradient overlay is added on top of the background image */
+    background-size: cover; /* The background image covers the entire header area */
+    background-position: center; /* The background image is centered */
+    padding: 10px; /* Adds some padding inside the header */
+    position: relative; /* Allows for absolutely positioned elements within the header */
+}
+
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Makes nav a flex container */
+    justify-content: space-between; /* Distributes space between logo and nav-buttons */
+    padding: 10px 0; /* Adds vertical padding inside the nav */
+    align-items: center; /* Vertically centers the logo and buttons */
+    z-index: 10; /* Ensures nav stays above other elements when overlapping */
+}
+
+
+.logo {
+    width: 150px; /* Sets the width of the logo image to 150 pixels */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the logo */
+}
+
+nav button {
+    border: 0; /* Removes the default border around the button */
+    outline: 0; /* Removes the default focus outline, which is often used for accessibility */
+    background: #eb3b37; /* Sets the background color of the button to a specific red shade */
+    color: white; /* Sets the text color of the button to white */
+    padding: 7px 20px; /* Adds padding inside the button: 7px vertically and 20px horizontally */
+    font-size: 12px; /* Sets the font size of the button text to 12 pixels */
+    border-radius: 4px; /* Rounds the corners of the button with a 4-pixel radius */
+    margin-left: 10px; /* Adds 10 pixels of space to the left of the button, separating it from adjacent elements */
+    cursor: pointer; /* Changes the cursor to a pointer (hand icon) when hovering over the button */
+}
+
+
+.language-btn {
+    display: inline-flex; /* Makes the button an inline-level flex container */
+    align-items: center; /* Vertically centers the content within the button */
+    background: transparent; /* Makes the background of the button transparent */
+    border: 1px solid white; /* Adds a 1-pixel white border around the button */
+    padding: 7px 15px; /* Adds padding inside the button: 7px vertically and 15px horizontally */
+}
+
+
+
+.language-btn image{
+    width:10px;
+    margin-left: 20px;
+}
+
+.header-content{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.header-content h1{
+    font-size: 40px;
+}
+
+.header-content h3{
+    font-size: 25px;
+}
+
+.header-content p{
+    font-size: 23px;
+}
+
+.email-signUp{
+    
+    display: flex;
+    justify-content: center;
+    border-radius:4px;
+    overflow: hidden;
+    margin-top: 50px;
+    
+    
+}
+
+.email-signUp input{
+    
+    border:5px;
+    border-radius: 3px;
+    border-color: black;
+    outline: 0;
+    margin-left: 10px;
+    width: 300px;
+    background:transparent;
+    border: 2px solid rgb(18, 122, 18);
+    margin-right: 10px;
+    color: white;
+    padding:  2px 20px;
+    
+   
+
+}
+
+.email-signUp button{
+    border:0;
+    border-radius: 3px;
+    outline:0;
+    background: #e4221e;
+    font-size: 20px;
+    
+    cursor: pointer;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+
+
+
+/*--------------------Features-------------------------------*/
+
+.features {
+    font-size: 22px;
+    padding: 50px 12%;
+}
+
+.rows {
+    display: flex; /* Flexbox layout for rows */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Ensure space between text and image */
+    width: 100%; /* Full width of the container */
+    padding: 50px 0; /* Padding around the row */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+
+}
+
+.text-col {
+    flex-basis: 50%; /* Take up 50% of the row */
+    margin-bottom: 20px; /* Space below the text column */
+    
+}
+
+.img-col {
+    flex-basis: 50%; /* Take up 50% of the row */
+    margin-bottom: 20px; /* Space below the image column */
+    text-align: center; /* Center the image horizontally if needed */
+}
+
+.img-col img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc; /* Light gray line */
+    margin: 0; /* No margin to ensure it spans full width */
+    width: 100%;
+}
+
+/*----------------------faq---------------------------*/
+.faq{
+    padding-top: 20px;
+    text-align: center;
+    font-size:15px;
+}
+
+.faq h1{
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+.accordian{
+    margin: 60px auto;
+    width:90%;
+    max-width: 650px;
+}
+
+.accordian li{
+    list-style: none;
+    padding: 5px;
+    width:100%;
+
+}
+
+.accordian li label{
+    display:flex;
+    align-items: center;
+    padding:20px;
+    font-size:20px ;
+    font-weight: 500;
+    background-color: #403939;
+    margin-bottom: 2px;
+    cursor:pointer;
+    position:relative;
+
+}
+
+label::after{
+    content:'+';
+    font-size: 34px;
+    right:20px;
+    position:absolute;
+    
+}
+
+
+input[type="radio"]{
+    display:none;
+}
+
+
+.accordian .content{
+    background:#303030;
+    overflow:hidden;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0px; 
+    transition: max-height 0.5s , padding 0.5s;
+    
+}
+
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
